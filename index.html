@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/1c005ec541.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/mobile-screen-button-solid.svg">
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="./styles/output.css">
+</head>
+<body class="max-w-screen-2xl mx-auto">
+    <header>
+        <div class="px-5 md:px-20 pt-5 md:pt-10 pb-20 md:pb-56 lg:pb-64 bg-slate-50">
+            <nav class="flex justify-between">
+                <h3 class="text-lg md:text-xl font-bold text-slate-800">Hot Gadgets</h3>
+                <button class="phone-btn-primary">Sign Up</button>
+            </nav>
+            <div class="text-center">
+                <h1 class="mt-12 text-2xl md:text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+                <p class="mt-3 md:mt-8 w-[70%] md:w-[65%] lg:w-1/2 mx-auto text-gray-600">There are many variations of Lorem ipsum available, but the majority have suffered alteration in some form, by injected human</p>
+                <button class="mt-5 phone-btn-primary">Buy Now</button>
+            </div>
+        </div>
+        <div class="relative max-w-[80%] mx-auto">
+            <div class="w-[20%] md:w-[15%] absolute md:-top-24  lg:-top-28 md:left-[22%]"><img src="./images/phone.png" alt=""></div>
+            <div class="w-[27%] md:w-[22%] absolute md:-top-48 lg:-top-56 left-[39%]"><img src="./images/phone.png" alt=""></div>
+            <div class="w-[20%] md:w-[15%] absolute md:-top-24 lg:-top-28 left-[63%]"><img src="./images/phone.png" alt=""></div>
+        </div>
+    </header>
+    <main class="mt-[25%]">
+        <div class="text-center">
+            <h3 class="text-3xl font-bold">Search Your Phone</h3>
+            <i class="fa-solid fa-magnifying-glass relative left-10 text-gray-500"></i>
+            <input type="text" name="" placeholder="Search your phone" class="bg-stone-200 my-8 px-12 py-4 w-1/2 rounded-s-lg focus:outline-none text-gray-700 font-medium" id="search-field">
+            <button class="phone-btn-primary rounded-s-none relative -left-1 py-4" onclick="searchPhones()">Search</button>
+            <div id="loader" class="mt-10 hidden">
+                <span class="loading loading-spinner loading-lg text-indigo-600"></span>
+            </div>
+            <div class="mt-4 grid grid-cols-3 gap-7 px-28" id="phone-list">
+
+            </div>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="show_Details_modal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="phone-body" class="text-left">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <button class="phone-btn-primary bg-red-600">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+            <button onclick="showAll()" class="phone-btn-primary hidden my-10" id="show-all-btn">Show All</button>
+        </div>
+    </main>
+    <script src="./js/phone.js"></script>
+</body>
+</html>

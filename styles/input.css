@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .phone-btn-primary {
+        @apply px-7 py-2 bg-blue-600 text-white  font-bold rounded-lg;
+    }
+}
